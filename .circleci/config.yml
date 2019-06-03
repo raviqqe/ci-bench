@@ -4,8 +4,7 @@ jobs:
     docker:
       - image: ubuntu:disco
     steps:
-      - run: apt -y update --fix-missing
-      - run: apt -y install python3
       - checkout
+      - run: ./setup.sh
       - run: ./inspect.sh
       - run: ./bench.py

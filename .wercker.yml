@@ -4,9 +4,7 @@ build:
   steps:
     - script:
         name: Set up
-        code: |
-          apt -y update --fix-missing
-          apt -y install python3
+        code: ./setup.sh
     - script:
         name: Inspect
         code: ./inspect.sh
