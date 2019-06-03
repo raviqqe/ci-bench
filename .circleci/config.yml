@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: ubuntu:bionic
+    steps:
+      - run: apt -y update --fix-missing
+      - run: apt -y install python3
+      - checkout
+      - run: ./inspect.sh
+      - run: ./bench.py
