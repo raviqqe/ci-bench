@@ -8,7 +8,7 @@ num_processes = 8
 def run(_):
     acc = 0
 
-    for i in range(2 ** 24 * 8):
+    for i in range(2 ** 24 * 16):
         acc += i
 
     return acc
