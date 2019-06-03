@@ -1,0 +1,15 @@
+box: ubuntu:disco
+
+build:
+  steps:
+    - script:
+        name: Set up
+        code: |
+          apt -y update --fix-missing
+          apt -y install python3
+    - script:
+        name: Inspect
+        code: ./inspect.sh
+    - script:
+        name: Benchmark
+        code: ./bench.py
