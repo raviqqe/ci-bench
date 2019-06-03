@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu:bionic
+      - image: ubuntu:disco
     steps:
       - run: apt -y update --fix-missing
       - run: apt -y install python3
